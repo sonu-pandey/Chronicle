@@ -20,18 +20,14 @@ import com.google.firebase.auth.FirebaseUser;
 import java.util.List;
 
 public class ChatAdapter extends RecyclerView.Adapter<ChatViewHolders>{
-
-   private List<ChatObject> chatList;
+    private List<ChatObject> chatList;
     private Context context;
-
-
 
 
     public ChatAdapter(List<ChatObject> matchesList, Context context){
         this.chatList = matchesList;
         this.context = context;
     }
-
 
     @Override
     public ChatViewHolders onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -49,15 +45,12 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatViewHolders>{
         holder.mMessage.setText(chatList.get(position).getMessage());
         if(chatList.get(position).getCurrentUser()){
             holder.mMessage.setGravity(Gravity.END);
-            holder.mMessage.setTextColor(Color.parseColor("#ffffff"));
-            holder.mContainer.setBackgroundColor(Color.parseColor("#FF4081"));
-
-
-
+            holder.mMessage.setTextColor(Color.parseColor("#404040"));
+            holder.mContainer.setBackgroundColor(Color.parseColor("#F4F4F4"));
         }else{
             holder.mMessage.setGravity(Gravity.START);
-            holder.mMessage.setTextColor(Color.parseColor("#ffffff"));
-            holder.mContainer.setBackgroundColor(Color.parseColor("#1781DB"));
+            holder.mMessage.setTextColor(Color.parseColor("#FFFFFF"));
+            holder.mContainer.setBackgroundColor(Color.parseColor("#2DB4C8"));
         }
 
     }
@@ -67,7 +60,5 @@ public class ChatAdapter extends RecyclerView.Adapter<ChatViewHolders>{
         return this.chatList.size();
     }
 }
-
-
 
 

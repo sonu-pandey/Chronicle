@@ -19,7 +19,7 @@
             android:layout_weight="1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@color/link_blue"
+android:background="@drawable/shape1"
             android:text="SignOut"
             android:textColor="@color/white"
             android:onClick="logoutUser" />
@@ -28,7 +28,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:background="@color/link_blue"
+            android:background="@drawable/shape1"
             android:text="Matches"
             android:textColor="@color/white"
             android:onClick="goToMatches" />
@@ -37,11 +37,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="5dp"
-            android:background="@color/link_blue"
+            android:background="@drawable/shape1"
             android:text="Settings"
             android:textColor="@color/white"
             android:onClick="goToSettings" />
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner_layout"
+        >
 
     <com.lorentzos.flingswipe.SwipeFlingAdapterView
         android:id="@+id/frame"
@@ -50,6 +61,66 @@
         android:layout_height="match_parent"
         app:rotation_degrees="15.5"
         tools:context=".MyActivity"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/dislikebtn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/round_button_with_border"
+                android:padding="10dp"
+                android:src="@drawable/ic_dislike"
+                android:onClick="DislikeBtn"
+                android:backgroundTint="@color/colorPrimary"/>
+
+            <ImageButton
+                android:id="@+id/commentbtn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/round_button_with_border"
+                android:padding="10dp"
+                android:src="@drawable/ic_settings"
+                android:onClick="goToSettings"
+                android:backgroundTint="@color/colorPrimary"/>
+
+
+            <ImageButton
+                android:id="@+id/likebtn"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:background="@drawable/round_button_with_border"
+                android:padding="10dp"
+                android:src="@drawable/ic_like1"
+                android:onClick="LikeBtn"
+                android:backgroundTint="@color/colorPrimary"/>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
 
 
 
