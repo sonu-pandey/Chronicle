@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Chronicle</string>
+    <string name="terms_and_cond">By Signing in, you agree with out Terms Of Services and Privacy Policy</string>
+
+    <string name="login">Login</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="password">password</string>
+</resources>

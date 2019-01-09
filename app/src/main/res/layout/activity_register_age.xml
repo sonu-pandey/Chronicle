@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/link_blue">
+
+
+
+    <TextView
+        android:id="@+id/getStartedTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="100dp"
+        android:text="When were you born?"
+        android:textColor="#FFF"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <DatePicker
+        android:id="@+id/ageSelectionPicker"
+        style="@style/MyDatePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/getStartedTextView"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#ff4081"
+        android:calendarTextColor="#1781DB"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:yearListSelectorColor="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/ageContinueButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ageSelectionPicker"
+        android:layout_marginLeft="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/shape"
+
+        android:elevation="24dp"
+        android:text="Continue"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" />
+
+</RelativeLayout>

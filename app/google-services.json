@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "517132697915",
+    "firebase_url": "https://chronicle-c354c.firebaseio.com",
+    "project_id": "chronicle-c354c",
+    "storage_bucket": "chronicle-c354c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517132697915:android:0a03244a0613a7b1",
+        "android_client_info": {
+          "package_name": "com.example.rututechnologies.chronicle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517132697915-bbd95rnp05tdsvnv7d2flp0g0v6qh2up.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.rututechnologies.chronicle",
+            "certificate_hash": "a5598651f2bbccbccde47a22b4e80daf9576eea1"
+          }
+        },
+        {
+          "client_id": "517132697915-l6d7a4ld68ldkbjf9f6h5vfn046r6as0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1yg8w0ZXCnmYqlnw4TaI5Fvfg4MpVJ1E"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517132697915-l6d7a4ld68ldkbjf9f6h5vfn046r6as0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
