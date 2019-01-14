@@ -20,7 +20,9 @@
         android:layout_marginRight="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
+       android:textAlignment="center"
         android:background="@drawable/edittext_rounded"
+
 
         android:hint="name"
         android:id="@+id/name"/>
