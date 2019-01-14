@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Chronicle</string>
-    <string name="terms_and_cond">By Signing in, you agree with out Terms Of Services and Privacy Policy</string>
+    <string name="terms_and_cond">
+        <a href ="https://www.google.com/">
+        By Signing in, you agree with our Terms Of Services and Privacy Policy
+    </a></string>
 
     <string name="login">Login</string>
     <string name="forgot_password">Forgot Password?</string>

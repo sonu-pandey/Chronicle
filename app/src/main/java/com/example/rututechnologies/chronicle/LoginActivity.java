@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,6 +24,7 @@ public class LoginActivity extends AppCompatActivity {
     private EditText mEmail, mPassword;
 
     TextView forgot_password;
+    TextView tvTandC;
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthStateListener;
     @Override
@@ -50,6 +52,11 @@ public class LoginActivity extends AppCompatActivity {
         mEmail = (EditText) findViewById(R.id.email);
         mPassword = (EditText) findViewById(R.id.password);
         forgot_password = findViewById(R.id.forgot_password);
+       TextView tvTandC = (TextView) findViewById(R.id.tvTandC);
+
+        tvTandC.setMovementMethod(LinkMovementMethod.getInstance());
+
+
 
         forgot_password.setOnClickListener(new View.OnClickListener() {
             @Override

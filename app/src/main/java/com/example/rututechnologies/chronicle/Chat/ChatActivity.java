@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.example.rututechnologies.chronicle.R;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
@@ -16,6 +15,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.example.rututechnologies.chronicle.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -52,9 +52,11 @@ public class ChatActivity extends AppCompatActivity {
         mRecyclerView.setNestedScrollingEnabled(false);
         mRecyclerView.setHasFixedSize(false);
         mChatLayoutManager = new LinearLayoutManager(ChatActivity.this);
+
         mRecyclerView.setLayoutManager(mChatLayoutManager);
         mChatAdapter = new ChatAdapter(getDataSetChat(), ChatActivity.this);
         mRecyclerView.setAdapter(mChatAdapter);
+        mRecyclerView.scrollToPosition(mRecyclerView.getAdapter().getItemCount()-1);
 
         mSendEditText = findViewById(R.id.message);
         mSendButton = findViewById(R.id.send);
@@ -123,6 +125,7 @@ public class ChatActivity extends AppCompatActivity {
                         ChatObject newMessage = new ChatObject(message, currentUserBoolean);
                         resultsChat.add(newMessage);
                         mChatAdapter.notifyDataSetChanged();
+
                     }
                 }
 
@@ -148,4 +151,3 @@ public class ChatActivity extends AppCompatActivity {
         return resultsChat;
     }
 }
-

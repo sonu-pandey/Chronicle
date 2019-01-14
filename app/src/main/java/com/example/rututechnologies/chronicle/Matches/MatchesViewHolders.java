@@ -10,7 +10,8 @@ import android.widget.TextView;
 import com.example.rututechnologies.chronicle.Chat.ChatActivity;
 import com.example.rututechnologies.chronicle.R;
 
-public class MatchesViewHolders extends RecyclerView.ViewHolder implements View.OnClickListener{
+public class
+MatchesViewHolders extends RecyclerView.ViewHolder implements View.OnClickListener{
     public TextView mMatchId, mMatchName;
     public ImageView mMatchImage;
     public MatchesViewHolders(View itemView) {

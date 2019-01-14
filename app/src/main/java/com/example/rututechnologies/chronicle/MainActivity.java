@@ -1,6 +1,7 @@
 package com.example.rututechnologies.chronicle;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
     private cards cards_data[];
     private com.example.rututechnologies.chronicle.Cards.arrayAdapter arrayAdapter;
     private int i;
+    private Context mContext = MainActivity.this;
 
     private FirebaseAuth mAuth;
 
@@ -210,5 +212,35 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, MatchesActivity.class);
         startActivity(intent);
         return;
+    }
+
+    public void LikeBtn(View v) {
+        if (rowItems.size() != 0) {
+            cards obj = rowItems.get(0);
+
+            String userId = obj.getUserId();
+            usersDb.child(userId).child("connections").child("yeps").child(currentUId).setValue(true);
+            isConnectionMatch(userId);
+            Toast.makeText(MainActivity.this, "Like", Toast.LENGTH_SHORT).show();
+
+            rowItems.remove(0);
+            arrayAdapter.notifyDataSetChanged();
+
+
+        }
+    }
+
+    public void DislikeBtn(View v) {
+        if (rowItems.size() != 0) {
+            cards obj = rowItems.get(0);
+
+            String userId = obj.getUserId();
+            usersDb.child(userId).child("connections").child("nope").child(currentUId).setValue(true);
+            Toast.makeText(MainActivity.this, "Dislike", Toast.LENGTH_SHORT).show();
+
+            rowItems.remove(0);
+            arrayAdapter.notifyDataSetChanged();
+
+        }
     }
 }
